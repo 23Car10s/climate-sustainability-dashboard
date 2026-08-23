@@ -24,7 +24,7 @@ selected_sectors = st.sidebar.multiselect("Select Sectors", sectors, default=sec
 @st.cache_data
 def load_data():
     np.random.seed(42)
-    dates = pd.date_range(start="2018-01-01", end="2024-12-31", freq="M")
+    dates = pd.date_range(start="2018-01-01", end="2024-12-31", freq="ME")
     data = []
     for d in dates:
         for s in sectors:
